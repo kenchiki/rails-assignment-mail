@@ -1,24 +1,10 @@
-# README
+# メールを送信できるようになる
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ゴール
 
-Things you may want to cover:
+- コメントが登録されたらメールをシステム管理者に送信してください。
+- from、to、subjectは固定値で構いません。
+- 本文のBlog、Entry、Commentは投稿されたコメントに合わせて変更してください。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Ruby version
+2.5.1
