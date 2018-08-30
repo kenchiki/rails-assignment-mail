@@ -10,10 +10,11 @@ class CommentsController < ApplicationController
 
   def create
     presenter.comment = presenter_entry.comments_new(comment_params)
-    unless presenter_comment.save
-      render template: 'entries/show' and return
-    end
+    render template: 'entries/show' and return unless presenter_comment.save
 
+    CommentMailer.mail_notify_comment(blog: presenter.blog,
+                                      entry: presenter.entry,
+                                      comment: presenter.comment)
     redirect_to blog_entry_path(presenter_blog, presenter_entry), notice: 'Comment was successfully created.'
   end
 

@@ -16,7 +16,6 @@ class CommentsPresenter
   end
 
   def find_path_comment
-    return entry.comments_find(@params[:comment_id]) if @params[:comment_id]
     return entry.comments_find(@params[:id]) if @params[:id]
     Comment.new
   end
