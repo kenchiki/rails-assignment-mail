@@ -15,5 +15,5 @@
               unapproved
           %td
             - if  comment.unapproved?
-              = link_to 'Approve', blog_entry_comment_approve_path(blog, entry, comment), method: :put
+              = link_to 'Approve', approve_blog_entry_comment_path(blog, entry, comment), method: :put
           %td= link_to 'Destroy', blog_entry_comment_path(blog, entry, comment), method: :delete, data: {confirm: 'are you sure?'}
